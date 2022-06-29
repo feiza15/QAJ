@@ -2,9 +2,9 @@ package com.qa.oop;
 
 public class Person {
 
-    String name;
-    int age;
-    String jobTitle;
+    private String name;
+    private int age;
+    private String jobTitle;
 
     public Person() {
 
@@ -43,7 +43,9 @@ public class Person {
     }
 
     public void setAge(int age) {
-        this.age = age;
+        if(age >= 0 && age <= 125) {
+            this.age = age;
+        }
     }
     public int getAge() {
         return age;
@@ -54,5 +56,12 @@ public class Person {
     }
     public String getJobTitle() {
         return jobTitle;
+    }
+
+    public void printPerson() {
+            System.out.println("name: " + name);
+            System.out.println("age: " + age);
+            System.out.println("Job Title: " + jobTitle);
+
     }
 }
