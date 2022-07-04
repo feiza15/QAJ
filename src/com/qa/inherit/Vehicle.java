@@ -6,17 +6,18 @@ public abstract class Vehicle {
     private int maxPassengers;
     private String make;
 
+    static int numberOfVehicles = 0;
+
     private int gear;
 
     public Vehicle(int maxGear, int maxPassenger, String make) {
         this.maxGear = maxGear;
         this.maxPassengers = maxPassenger;
         this.make = make;
+
+        numberOfVehicles++;
+        System.out.println(numberOfVehicles);
     }
-
-    //public Vehicle() {
-
-    //}
 
     public void pressBreak() {
         System.out.println("brrrrr");
